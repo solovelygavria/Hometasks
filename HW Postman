@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "a38f6503-f13a-4793-8c24-ef4d73bbf3b0",
+		"name": "HW Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user qwertyyyy1357@list.ru",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"qwertyyyy13579@list.ru\",\r\n\"name\":\"asdfghjkl491\",\r\n\"tasks\":[23, 31, 161],\r\n\"companies\":[15, 17],\r\n\"hobby\": \"ловить бабочек\",\r\n\"adres\": \"Neverland\",\r\n\"name1\": \"Deb\",\r\n\"surname1\": \"M.\",\r\n\"fathername1\": \"Harry\",\r\n\"cat\": \"Liz\",\r\n\"dog\": \"Garfield\",\r\n\"parrot\": \"Kesha\",\r\n\"cavy\": \"Svinka\",\r\n\"hamster\": \"Homa\",\r\n\"squirrel\": \"Sq\",\r\n\"phone\": \"123456789876543\",\r\n\"inn\": \"123456554567\",\r\n\"gender\": \"f\",\r\n\"birthday\": \"05.03.1993\",\r\n\"date_start\": \"23.07.2000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru//tasks//rest//createuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"",
+						"tasks",
+						"",
+						"rest",
+						"",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task 161",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "task_title",
+							"value": "Cuddle the cat",
+							"type": "text"
+						},
+						{
+							"key": "task_description",
+							"value": "Cuddle the cat",
+							"type": "text"
+						},
+						{
+							"key": "email_owner",
+							"value": "qwertyyyy13579@list.ru",
+							"type": "text"
+						},
+						{
+							"key": "email_assign",
+							"value": "qwertyyyy13579@list.ru",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http:\\/\\/users.bugred.ru\\/tasks\\/rest\\/createtask",
+					"host": [
+						"http"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"",
+						"users.bugred.ru",
+						"",
+						"tasks",
+						"",
+						"rest",
+						"",
+						"createtask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Schedule a task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email_owner",
+							"value": "qwertyyyy13579@list.ru",
+							"type": "text"
+						},
+						{
+							"key": "task_id",
+							"value": "84",
+							"type": "text"
+						},
+						{
+							"key": "hours",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "minutes",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "01",
+							"type": "text"
+						},
+						{
+							"key": "days",
+							"value": "08",
+							"type": "text"
+						},
+						{
+							"key": "day_weeks",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http:\\/\\/users.bugred.ru\\/tasks\\/rest\\/addtaskincron",
+					"host": [
+						"http"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"",
+						"users.bugred.ru",
+						"",
+						"tasks",
+						"",
+						"rest",
+						"",
+						"addtaskincron"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "magicsearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks//rest//magicsearch?query=qwertyyyy1357@list.ru",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"",
+						"tasks",
+						"",
+						"rest",
+						"",
+						"magicsearch"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "qwertyyyy1357@list.ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http:\\/\\/users.bugred.ru\\/tasks\\/rest\\/createcompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email_owner\": \"qwertyyyy13579@list.ru\",\r\n    \"company_name\": \"Котики инкорпорейтед\",\r\n    \"company_users\": [\"qwertyyyy13579@list.ru\"],\r\n    \"company_type\": \"ООО\",\r\n    \"phone\": \"1234567898765\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http:\\/\\/users.bugred.ru\\/tasks\\/rest\\/createcompany",
+					"host": [
+						"http"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"",
+						"users.bugred.ru",
+						"",
+						"tasks",
+						"",
+						"rest",
+						"",
+						"createcompany"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
